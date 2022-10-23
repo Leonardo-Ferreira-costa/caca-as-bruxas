@@ -1,0 +1,74 @@
+<!-- Bem vindo ao caça as bruxas 2, segue as regras:
+
+Como a página deveria funcionar:
+Ao clicar no botão BUSCAR POKEMON será realizada uma solicitação para a PokeAPI, o resultado da solicitação será carregado no card nas partes da frete e de trás.
+Dados carregados:
+- Imagem.
+- Nome do pokemon.
+- Nome do ataque.
+
+Regras:
+1 - Pegue este projeto aqui no codepen e leve para o seu VS Code.
+2 - Ache os erros no arquivo .JS.
+    A cada erro achado será marcado um ponto no placar.
+3 - Apenas altere, não reescreva o código por inteiro.
+4 - Total de 3 pontos.
+
+obs.: Não mexa no bloco de código como este:
+    //############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
+    /*####################*/    score(2);  /*#######################*/ 
+    //############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
+Ele é responsável por marcar os pontos.
+
+Criado por: Leonardo Ferreira
+Link do codepen: https://codepen.io/leonardo-ferreira-costa/pen/vYrBJWX
+Meu Github: https://github.com/Leonardo-Ferreira-costa
+-->
+<html>
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="scoreDiv"><span>Pontos</span><span class="score">0</span></div>
+<h1>Conheça um Pokemon aleatório</h1>
+
+  
+<button class="btn btn-primary d-flex justify-content-center mb-3">BUSCAR POKEMON</button>
+
+<div class="flip-card">
+  
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://pbs.twimg.com/media/DYIBnTbXcAI93nz.jpg" id="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <span>Nome: </span><h1 id="namePokemon">Clique para buscar um Pokemon.</h1> 
+      <span>Ataque: </span>
+      <p id="movesPokemon"></p> 
+      
+    </div>
+  </div>
+</div>
+  
+  <h6>Passe o mouse na imagem para ver as informações deste Pokemon</h6>
+
+  
+  
+   <script>
+//############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
+        if(localStorage.getItem("Pontos") == null){
+            document.querySelector(".score").innerHTML = 0;
+
+            }else{
+                document.querySelector(".score").innerHTML = localStorage.getItem("Pontos");
+        }
+//############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
+
+    </script>
+</body>
+</html>
