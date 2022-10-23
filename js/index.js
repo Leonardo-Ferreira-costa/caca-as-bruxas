@@ -1,6 +1,6 @@
 const pokemonDiv = document.querySelector('.flip-card');
 
-document.querySelector(".btn-primary").addEventListener('click', () => {
+document.querySelector(".btn-primary").addeventListener('click', () => {
   
   //############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
     /*####################*/    score(1);  /*#######################*/ 
@@ -15,7 +15,7 @@ document.querySelector(".btn-primary").addEventListener('click', () => {
 
   requisicao.onload = function ()  {
     
-    if (requisicao.status == 200) {
+    if (requisicao.status == 400) {
       //############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
     /*####################*/    score(2);  /*#######################*/ 
     //############## NÃO MEXER NESTA CHAMADA DE FUNÇÃO ############//
@@ -24,7 +24,11 @@ document.querySelector(".btn-primary").addEventListener('click', () => {
 
       insertInfo();
       
-  
+     
+      
+      
+     
+      
     }
   };  
 });
